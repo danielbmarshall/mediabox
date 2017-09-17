@@ -1,5 +1,6 @@
 # mediabox
-Mediabox is meant to be an all Docker Container based media aggregator stack.
+Mediabox is meant to be an all Docker Container based media aggregator stack. See original GIT at https://github.com/tom472/mediabox .
+THIS IS ONLY A TEST FORK - I am not a developer, just customizing the really great work from tom472 to my own needs.
 
 Components include:
   * [Couchpotato movie library manager](https://couchpota.to/)
@@ -11,6 +12,12 @@ Components include:
   * [Ombi media assistant](http://www.ombi.io/)
   * [Portainer Docker Container manager](https://portainer.io/)
   * [Minio cloud storage](https://www.minio.io/)
+  * [Ubiquiti Unifi](https://unifi-sdn.ubnt.com/)
+  * [Home-Assistant](https://home-assistant.io/)
+  * [Ubooquity](https://vaemendis.net/ubooquity/)
+  * [Sonarr](https://sonarr.tv/)
+  * [Muximux](https://github.com/mescon/Muximux)
+  * [HTPC Manager](http://htpc.io/)
   
 # Prerequisites
 
@@ -25,6 +32,10 @@ Components include:
 **PLEASE NOTE**
 
 For simplicity's sake (eg. automatic dependency management), the method used to install these packages is Ubuntu 16.04's default package manager, [APT](https://wiki.debian.org/Apt).  There are several other methods that work just as well, if not better (especially if you don't have superuser access on your system), so use whichever method you prefer.  Continue when you've successfully installed all packages listed.
+
+For Muximux, install the plugin "[Ignore X-Frame headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)" which disables the blocking of non-secure content. This extension allows containers like HTPC Manager to load correctly in the frame.
+
+For DelugeVPN, you will need to load one openvpn profile and certs from PIA after first launch or Deluge will not start! (https://www.privateinternetaccess.com/pages/openvpn-ios)
 
 ### Installation:
 
