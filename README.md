@@ -63,7 +63,7 @@ Reboot your machine manually, or using the command line:
 
 Once the prerequisites are all taken care of you can move forward with using mediabox.
 
-1. Clone the mediabox repository: `$ git clone https://github.com/tom472/mediabox.git`
+1. Clone the mediabox repository: `$ git clone https://github.com/danielbmarshall/mediabox.git`
 2. Change directory into mediabox: `$ cd mediabox/`
 3. Make the mediabox.sh script executable: `$ chmod +x mediabox.sh`
 4. Run the mediabox.sh script: `$ ./mediabox.sh`
