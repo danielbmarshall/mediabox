@@ -26,10 +26,10 @@ services:
       default:
         aliases: []
     ports:
-    - "${IP_ADDRESS}:58846:58846"
     - "${IP_ADDRESS}:58946:58946"
-    - "${IP_ADDRESS}:8112:8112"
     - "${IP_ADDRESS}:8118:8118"
+    - "${IP_ADDRESS}:58846:58846"
+    - "${IP_ADDRESS}:8112:8112"
     restart: always
     volumes:
     - ./content:/data
@@ -58,7 +58,11 @@ services:
     networks:
       default:
         aliases: []
-    volumes: []
+    ports:
+    - "${IP_ADDRESS}:8123:8123"
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ./hass/config:.config
   minio:
     command: server /export
     container_name: minio
@@ -76,11 +80,19 @@ services:
     volumes:
     - ${PWD}:/export
   muximux:
+    environment:
+    - PGID=${PGID}
+    - PUID=${PUID}
     image: linuxserver/muximux:latest
     networks:
       default:
         aliases: []
-    volumes: []
+    ports:
+    - "${IP_ADDRESS}:8585:8585"
+    restart: always
+    volumes:
+    - ./muximux/config:/config
+    - /etc/localtime:/etc/localtime
   ombi:
     container_name: ombi
     environment:
@@ -111,15 +123,15 @@ services:
       default:
         aliases: []
     ports:
-    - "${IP_ADDRESS}:3005:3005/tcp"
-    - "${IP_ADDRESS}:32400:32400/tcp"
+    - "${IP_ADDRESS}:8324:8324/tcp"
     - "${IP_ADDRESS}:32469:32469/tcp"
+    - "${IP_ADDRESS}:32400:32400/tcp"
+    - "${IP_ADDRESS}:1900:1900/udp"
     - "${IP_ADDRESS}:32412:32412/udp"
+    - "${IP_ADDRESS}:32413:32413/udp"
+    - "${IP_ADDRESS}:3005:3005/tcp"
     - "${IP_ADDRESS}:32414:32414/udp"
     - "${IP_ADDRESS}:32410:32410/udp"
-    - "${IP_ADDRESS}:8324:8324/tcp"
-    - "${IP_ADDRESS}:32413:32413/udp"
-    - "${IP_ADDRESS}:1900:1900/udp"
     restart: always
     volumes:
     - ./plex:/config
@@ -127,12 +139,6 @@ services:
     - ./content/tv:/data/tvshows
     - ./content/movies:/data/movies
     - /etc/localtime:/etc/localtime:ro
-  plexconnect:
-    image: varju/plexconnect:latest
-    networks:
-      default:
-        aliases: []
-    volumes: []
   plexpy:
     container_name: plexpy
     depends_on:
@@ -204,18 +210,38 @@ services:
     - ./content/tv:/tv
     - /etc/localtime:/etc/localtime:ro
   sonarr:
+    environment:
+    - PGID=${PGID}
+    - PUID=${PUID}
     image: linuxserver/sonarr:latest
     networks:
       default:
         aliases: []
-    volumes: []
+    ports:
+    - "${IP_ADDRESS}:8989:8989"
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ./sonarr/config:/config
+    - ./content/tv:/tv
+    - ./content/downloads:/downloads
   ubooquity:
+    environment:
+    - MAXMEM=1000
+    - PGID=${PGID}
+    - PUID=${PUID}
     image: linuxserver/ubooquity:latest
     networks:
       default:
         aliases: []
+    ports:
+    - "${IP_ADDRESS}:2202:2202"
+    - "${IP_ADDRESS}:2203:2203"
     restart: unless-stopped
-    volumes: []
+    volumes:
+    - ./ubooquity/config:/config
+    - ./content/books:/books
+    - ./content/comics:/comics
+    - ./content/files:/files
   uhttpd:
     container_name: uhttpd
     environment:
@@ -232,10 +258,21 @@ services:
     volumes:
     - ./www:/www
   unifi:
+    environment:
+    - TZ=Chicago
     image: linuxserver/unifi:latest
     networks:
       default:
         aliases: []
-    volumes: []
+    ports:
+    - "${IP_ADDRESS}:10001:10001"
+    - "${IP_ADDRESS}:3478:3478"
+    - "${IP_ADDRESS}:8080:8080"
+    - "${IP_ADDRESS}:8443:8443"
+    restart: unless-stopped
+    volumes:
+    - ./unifi/data:/var/lib/unifi
+    - ./unifi/logs:/var/log/unifi
+    - etc/localtime:etc/localtime:ro
 version: "2"
 volumes: {}
