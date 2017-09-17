@@ -52,10 +52,14 @@ fi
 `mkdir -p content/files`
 `mkdir -p content/books`
 `mkdir -p couchpotato`
-`mkdir -p delugevpn`
+`mkdir -p delugevpn/config/openvpn`
+`mv nl.ovpn delugevpn/config/openvpn/nl.ovpn`
+`mv ca.rsa.2048.crt delugevpn/config/openvpn/ca.rsa.2048.crt`
+`mv crl.rsa.2048.pem delugevpn/config/openvpn/crl.rsa.2048.pem`
 `mkdir -p hass`
 `mkdir -p htpcmanager`
-`mkdir -p muximux`
+`mkdir -p muximux/config/www/muximux`
+`mv settings.ini.php muximux/config/www/muximux/settings.ini.php`
 `mkdir -p ombi`
 `mkdir -p "plex/Library/Application Support/Plex Media Server/Logs"`
 `mkdir -p plexpy`
