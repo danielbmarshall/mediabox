@@ -87,7 +87,7 @@ services:
     image: linuxserver/muximux:latest
     network_mode: bridge
     ports:
-    - "${IP_ADDRESS}:8585:8585"
+    - "${IP_ADDRESS}:8585:80"
     restart: always
     volumes:
     - ./muximux/config:/config
