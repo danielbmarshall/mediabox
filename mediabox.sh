@@ -47,14 +47,22 @@ fi
 `mkdir -p content/downloads`
 `mkdir -p content/movies`
 `mkdir -p content/tv`
+`mkdir -p content/comics`
+`mkdir -p content/files`
+`mkdir -p content/books`
 `mkdir -p couchpotato`
 `mkdir -p delugevpn`
+`mkdir -p hass`
+`mkdir -p muximux`
 `mkdir -p ombi`
 `mkdir -p "plex/Library/Application Support/Plex Media Server/Logs"`
 `mkdir -p plexpy`
 `mkdir -p portainer`
 `mkdir -p radarr`
 `mkdir -p sickrage`
+`mkdir -p sonarr`
+`mkdir -p ubooquity`
+`mkdir -p unifi`
 `mkdir -p www`
 
 ###################
