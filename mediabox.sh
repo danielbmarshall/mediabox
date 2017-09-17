@@ -47,6 +47,7 @@ fi
 `mkdir -p content/downloads`
 `mkdir -p content/movies`
 `mkdir -p content/tv`
+`mkdir -p content/tv2`
 `mkdir -p content/comics`
 `mkdir -p content/files`
 `mkdir -p content/books`
