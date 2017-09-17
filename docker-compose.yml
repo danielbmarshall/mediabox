@@ -56,6 +56,7 @@ services:
     - /etc/localtime:/etc/localtime:ro
   home-assistant:
     image: homeassistant/home-assistant:latest
+    network_mode: bridge
     networks:
       default:
         aliases: []
@@ -64,6 +65,20 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ./hass/config:.config
+  htpcmanager:
+    environment:
+    - PGID=${PGID}
+    - PUID=${PUID}
+    - TZ=America/Chicago
+    image: linuxserver/htpcmanager:latest
+    network_mode: bridge
+    networks:
+      default:
+        aliases: []
+    ports:
+    - "${IP_ADDRESS}:8085:8085"
+    volumes:
+    - ./htpcmanager/config:/config
   minio:
     command: server /export
     container_name: minio
@@ -85,6 +100,7 @@ services:
     - PGID=${PGID}
     - PUID=${PUID}
     image: linuxserver/muximux:latest
+    network_mode: bridge
     networks:
       default:
         aliases: []
@@ -215,6 +231,7 @@ services:
     - PGID=${PGID}
     - PUID=${PUID}
     image: linuxserver/sonarr:latest
+    network_mode: bridge
     networks:
       default:
         aliases: []
@@ -231,6 +248,7 @@ services:
     - PGID=${PGID}
     - PUID=${PUID}
     image: linuxserver/ubooquity:latest
+    network_mode: bridge
     networks:
       default:
         aliases: []
@@ -262,6 +280,7 @@ services:
     environment:
     - TZ=Chicago
     image: linuxserver/unifi:latest
+    network_mode: bridge
     networks:
       default:
         aliases: []
