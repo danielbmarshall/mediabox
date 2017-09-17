@@ -11,6 +11,7 @@ services:
     - NAME_SERVERS=8.8.8.8,8.8.4.4
     - PGID=${PGID}
     - PUID=${PUID}
+    - STRICT_PORT_FORWARD=yes
     - STRONG_CERTS=no
     - VPN_DEVICE_TYPE=tun
     - VPN_ENABLED=yes
