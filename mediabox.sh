@@ -53,6 +53,7 @@ fi
 `mkdir -p couchpotato`
 `mkdir -p delugevpn`
 `mkdir -p hass`
+`mkdir -p htpcmanager`
 `mkdir -p muximux`
 `mkdir -p ombi`
 `mkdir -p "plex/Library/Application Support/Plex Media Server/Logs"`
