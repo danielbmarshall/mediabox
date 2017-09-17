@@ -129,7 +129,7 @@ read -p "What would you like to use as the daemon access password?: " daemonpass
 printf "\n\n"
 
 # Finish up the config
-echo "Configuring Deluge daemon access - UHTTPD index file - Permissions"
+echo "Configuring Deluge daemon access - UHTTPD index file - Muximux Defaults - General Permissions"
 
 # Push the Deluge Daemon Access info the to Auth file
 # printf "To complete the Deluge daemon access - copy and paste the line below to your terminal\n"
@@ -145,6 +145,12 @@ echo "Configuring Deluge daemon access - UHTTPD index file - Permissions"
 `sed -i 's/"\/home\/nobody\/Completed"/"\/data\/downloads"/g' delugevpn/config/core.conf`
 `sed -i 's/"move_completed": false,/"move_completed": true,/g'  delugevpn/config/core.conf`
 `docker start delugevpn > /dev/null 2>&1`
+
+# Configure the Muximux shortcuts
+`docker stop muximux > /dev/null 2>&1`
+`sed -i 's/IP_ADDRESS,/IP_ADDRESS,/g'  muximux/config/www/muximux/settings.ini.php`
+`cp .env muximux/config/www/muximux/.env`
+`docker start muximux > /dev/null 2>&1`
 
 # Configure UHTTPD settings and Index file
 `docker stop uhttpd > /dev/null 2>&1`
