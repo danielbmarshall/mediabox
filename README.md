@@ -97,7 +97,7 @@ Upon completion, the script will launch your mediabox containers.
 
 ---
 
-If you enjoy the project -- Fuel it with some caffeine :) 
+If you enjoy the project -- Donate to Tom Morgan as a thanks for his work (I did!) 
 
 [![Donate](https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg)](https://cash.me/$TomMorgan)
 
