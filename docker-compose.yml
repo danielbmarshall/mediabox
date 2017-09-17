@@ -55,7 +55,7 @@ services:
     - "${IP_ADDRESS}:8123:8123"
     volumes:
     - /etc/localtime:/etc/localtime:ro
-    - ./hass/config:.config
+    - ./hass/config:/config
   htpcmanager:
     environment:
     - PGID=${PGID}
@@ -245,6 +245,6 @@ services:
     volumes:
     - ./unifi/data:/var/lib/unifi
     - ./unifi/logs:/var/log/unifi
-    - /etc/localtime:etc/localtime:ro
+    - /etc/localtime:/etc/localtime:ro
 version: "2"
 volumes: {}
