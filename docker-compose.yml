@@ -23,9 +23,6 @@ services:
     - VPN_USER=${PIAUNAME}
     image: binhex/arch-delugevpn
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:58946:58946"
     - "${IP_ADDRESS}:8118:8118"
@@ -43,9 +40,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/couchpotato
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:5050:5050"
     restart: always
@@ -57,9 +51,6 @@ services:
   home-assistant:
     image: homeassistant/home-assistant:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8123:8123"
     volumes:
@@ -72,9 +63,6 @@ services:
     - TZ=America/Chicago
     image: linuxserver/htpcmanager:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8085:8085"
     volumes:
@@ -87,9 +75,6 @@ services:
     - MINIO_SECRET_KEY=minio123
     image: minio/minio
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:9009:9000"
     restart: always
@@ -101,9 +86,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/muximux:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8585:8585"
     restart: always
@@ -117,9 +99,6 @@ services:
     - PUID=${PUID}
     image: rogueosb/ombi
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:3579:3579"
     restart: always
@@ -136,9 +115,6 @@ services:
     hostname: ${HOSTNAME}
     image: plexinc/pms-docker:${PMSTAG}
     network_mode: host
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8324:8324/tcp"
     - "${IP_ADDRESS}:32469:32469/tcp"
@@ -165,9 +141,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/plexpy
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8181:8181"
     restart: always
@@ -180,9 +153,6 @@ services:
     container_name: portainer
     image: portainer/portainer
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:9000:9000"
     restart: always
@@ -197,9 +167,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/radarr
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:7878:7878"
     restart: always
@@ -215,9 +182,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/sickrage
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8081:8081"
     restart: always
@@ -232,9 +196,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/sonarr:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:8989:8989"
     volumes:
@@ -249,9 +210,6 @@ services:
     - PUID=${PUID}
     image: linuxserver/ubooquity:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:2202:2202"
     - "${IP_ADDRESS}:2203:2203"
@@ -268,9 +226,6 @@ services:
     - PUID=${PUID}
     image: fnichol/uhttpd
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:80:80"
     restart: always
@@ -281,9 +236,6 @@ services:
     - TZ=Chicago
     image: linuxserver/unifi:latest
     network_mode: bridge
-    networks:
-      default:
-        aliases: []
     ports:
     - "${IP_ADDRESS}:10001:10001"
     - "${IP_ADDRESS}:3478:3478"
