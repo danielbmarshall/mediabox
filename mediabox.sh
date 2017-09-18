@@ -58,8 +58,6 @@ fi
 `mv crl.rsa.2048.pem delugevpn/config/openvpn/crl.rsa.2048.pem`
 `mkdir -p hass`
 `mkdir -p htpcmanager`
-`mkdir -p muximux/config/www/muximux`
-`mv settings.ini.php muximux/config/www/muximux/settings.ini.php`
 `mkdir -p ombi`
 `mkdir -p "plex/Library/Application Support/Plex Media Server/Logs"`
 `mkdir -p plexpy`
@@ -148,6 +146,8 @@ echo "Configuring Deluge daemon access - UHTTPD index file - Muximux Defaults - 
 
 # Configure the Muximux shortcuts
 `docker stop muximux > /dev/null 2>&1`
+`rm muximux/config/www/muximux/settings.ini.php~ > /dev/null 2>&1`
+`mv settings.ini.php muximux/config/www/muximux/settings.ini.php`
 `sed -i 's/IP_ADDRESS,/IP_ADDRESS,/g'  muximux/config/www/muximux/settings.ini.php`
 `cp .env muximux/config/www/muximux/.env`
 `docker start muximux > /dev/null 2>&1`
