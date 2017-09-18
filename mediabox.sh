@@ -53,7 +53,7 @@ fi
 `mkdir -p content/books`
 `mkdir -p couchpotato`
 `mkdir -p delugevpn/config/openvpn`
-`mv nl.ovpn delugevpn/config/openvpn/Netherlands.ovpn`
+`mv Netherlands.ovpn delugevpn/config/openvpn/Netherlands.ovpn`
 `mv ca.rsa.2048.crt delugevpn/config/openvpn/ca.rsa.2048.crt`
 `mv crl.rsa.2048.pem delugevpn/config/openvpn/crl.rsa.2048.pem`
 `mkdir -p hass`
