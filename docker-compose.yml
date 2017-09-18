@@ -19,7 +19,7 @@ services:
     - VPN_PORT=1198
     - VPN_PROTOCOL=udp
     - VPN_PROV=pia
-    - VPN_REMOTE=us-east.privateinternetaccess.com
+    - VPN_REMOTE=nl.privateinternetaccess.com
     - VPN_USER=${PIAUNAME}
     image: binhex/arch-delugevpn
     network_mode: bridge
@@ -87,7 +87,7 @@ services:
     image: linuxserver/muximux:latest
     network_mode: bridge
     ports:
-    - "${IP_ADDRESS}:8585:80"
+    - "${IP_ADDRESS}:80:80"
     restart: always
     volumes:
     - ./muximux/config:/config
@@ -227,7 +227,7 @@ services:
     image: fnichol/uhttpd
     network_mode: bridge
     ports:
-    - "${IP_ADDRESS}:80:80"
+    - "${IP_ADDRESS}:8585:80"
     restart: always
     volumes:
     - ./www:/www
