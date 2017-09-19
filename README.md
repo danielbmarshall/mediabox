@@ -20,6 +20,8 @@ Components include:
   * [HTPC Manager](http://htpc.io/)
   * [cAdvisor](https://github.com/google/cadvisor)
   
+  ![Desktop screenshot](https://imgur.com/a/Igoov)
+  
 # Prerequisites
 
   * [Ubuntu 16.04 LTS](http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/)
