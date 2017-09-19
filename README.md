@@ -22,7 +22,7 @@ Components include:
   
 # Prerequisites
 
-  * [Ubuntu 16.04 LTS](https://www.ubuntu.com/)
+  * [Ubuntu 16.04 LTS](http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/)
   * [VPN account from Private internet Access](https://www.privateinternetaccess.com/pages/buy-vpn/Stevie) (Please see [binhex's Github Repo](https://github.com/binhex/arch-delugevpn) if you want to use a different VPN)
   * [Git](https://git-scm.com/)
   * [Docker](https://www.docker.com/)
