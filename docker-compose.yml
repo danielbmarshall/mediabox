@@ -148,6 +148,7 @@ services:
     - ./plex:/config
     - ./plex/transcode:/transcode
     - ./content/tv:/data/tvshows
+    - ./content/tv2:/data/tvshows2
     - ./content/movies:/data/movies
     - /etc/localtime:/etc/localtime:ro
   plexpy:
