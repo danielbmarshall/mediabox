@@ -30,7 +30,7 @@ last_check = 1505691225
 
 [773680newApplication]
 name = "Portainer"
-url = "http://IP_ADDRESS:9000"
+url = "http://locip:9000"
 scale = 1
 icon = "muximux-database"
 color = "#bf9000"
@@ -39,7 +39,7 @@ dd = "true"
 
 [Plex]
 name = "Plex"
-url = "http://IP_ADDRESS:32400/web/"
+url = "http://locip:32400/web/"
 scale = 1
 icon = "muximux-plex"
 color = "#f9be03"
@@ -49,7 +49,7 @@ default = "true"
 
 [PlexPy]
 name = "PlexPy"
-url = "http://IP_ADDRESS:8181"
+url = "http://locip:8181"
 scale = 1
 icon = "muximux-plexivity"
 color = "#cc7b19"
@@ -58,7 +58,7 @@ dd = "true"
 
 [Ombi]
 name = "Ombi"
-url = "http://IP_ADDRESS:3579/"
+url = "http://locip:3579/"
 scale = 1
 icon = "muximux-plex"
 color = "#df691a"
@@ -67,7 +67,7 @@ dd = "true"
 
 [Couchpotato]
 name = "CouchPotato"
-url = "http://IP_ADDRESS:5050"
+url = "http://locip:5050"
 scale = 1
 icon = "muximux-couchpotato"
 color = "#f85c22"
@@ -76,7 +76,7 @@ dd = "true"
 
 [Sonarr]
 name = "Sonarr"
-url = "http://IP_ADDRESS:8989/"
+url = "http://locip:8989/"
 scale = 1
 icon = "muximux-sonarr"
 color = "#35c5f4"
@@ -85,7 +85,7 @@ dd = "true"
 
 [870113newApplication]
 name = "Radarr"
-url = "http://IP_ADDRESS:7878/"
+url = "http://locip:7878/"
 scale = 1
 icon = "muximux-movie_filter"
 color = "#cc0000"
@@ -94,7 +94,7 @@ dd = "true"
 
 [625037newApplication]
 name = "Sickrage"
-url = "http://IP_ADDRESS:8081/home/"
+url = "http://locip:8081/home/"
 scale = 1
 icon = "muximux-play"
 color = "#0c343d"
@@ -103,7 +103,7 @@ dd = "true"
 
 [deluge]
 name = "Deluge VPN"
-url = "http://IP_ADDRESS:8112/"
+url = "http://locip:8112/"
 scale = 1
 icon = "muximux-deluge"
 color = "#9900ff"
@@ -112,7 +112,7 @@ dd = "true"
 
 [705606newApplication]
 name = "UniFi"
-url = "http://IP_ADDRESS:8443"
+url = "http://locip:8443"
 scale = 1
 icon = "muximux-connection"
 color = "#6fa8dc"
@@ -121,7 +121,7 @@ dd = "true"
 
 [812377newApplication]
 name = "Home Assistant"
-url = "http://IP_ADDRESS:8123/"
+url = "http://locip:8123/"
 scale = 1
 icon = "muximux-home2"
 color = "#674ea7"
@@ -130,7 +130,7 @@ dd = "true"
 
 [678211newApplication]
 name = "HTPC Manager"
-url = "http://IP_ADDRESS:8085/"
+url = "http://locip:8085/"
 scale = 1
 icon = "muximux-home"
 color = "#e69138"
@@ -139,7 +139,7 @@ dd = "true"
 
 [793005newApplication]
 name = "Ubooquity - Admin"
-url = "http://IP_ADDRESS:2203/ubooquity/admin/"
+url = "http://locip:2203/ubooquity/admin/"
 scale = 1
 icon = "muximux-book"
 color = "#b6d7a8"
@@ -148,7 +148,7 @@ dd = "true"
 
 [666910newApplication]
 name = "Ubooquity - Library"
-url = "http://IP_ADDRESS:2202/ubooquity/"
+url = "http://locip:2202/ubooquity/"
 scale = 1
 icon = "muximux-books"
 color = "#ead1dc"
@@ -157,7 +157,7 @@ dd = "true"
 
 [124879newApplication]
 name = "Minio"
-url = "http://IP_ADDRESS:9009/minio/login"
+url = "http://locip:9009/minio/login"
 scale = 1
 icon = "muximux-storage"
 color = "#00ff00"
@@ -166,7 +166,7 @@ dd = "true"
 
 [449278newApplication]
 name = "Setup Instructions"
-url = "http://IP_ADDRESS:8585"
+url = "http://locip:8585"
 scale = 1
 icon = "muximux-settings"
 color = ""
