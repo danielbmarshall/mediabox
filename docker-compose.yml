@@ -53,6 +53,7 @@ services:
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:8123:8123"
+    restart: always
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ./hass/config:/config
@@ -65,6 +66,7 @@ services:
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:8085:8085"
+    restart: always
     volumes:
     - ./htpcmanager/config:/config
   minio:
@@ -97,7 +99,7 @@ services:
     environment:
     - PGID=${PGID}
     - PUID=${PUID}
-    image: rogueosb/ombi
+    image: rogueosb/ombi:latest
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:3579:3579"
@@ -198,6 +200,7 @@ services:
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:8989:8989"
+    restart: always
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ./sonarr/config:/config
@@ -213,7 +216,7 @@ services:
     ports:
     - "${IP_ADDRESS}:2202:2202"
     - "${IP_ADDRESS}:2203:2203"
-    restart: unless-stopped
+    restart: always
     volumes:
     - ./ubooquity/config:/config
     - ./content/books:/books
@@ -241,7 +244,7 @@ services:
     - "${IP_ADDRESS}:3478:3478"
     - "${IP_ADDRESS}:8080:8080"
     - "${IP_ADDRESS}:8443:8443"
-    restart: unless-stopped
+    restart: always
     volumes:
     - ./unifi/data:/var/lib/unifi
     - ./unifi/logs:/var/log/unifi
