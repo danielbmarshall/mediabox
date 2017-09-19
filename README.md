@@ -18,6 +18,7 @@ Components include:
   * [Sonarr](https://sonarr.tv/)
   * [Muximux](https://github.com/mescon/Muximux)
   * [HTPC Manager](http://htpc.io/)
+  * [cAdvisor](https://github.com/google/cadvisor)
   
 # Prerequisites
 
