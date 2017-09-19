@@ -26,7 +26,7 @@ branches[experimental] = "262b1a4c4ca6fa0386e46400211604d66c0bd22d"
 branches[master] = "66b11488206b44364b6ed8bb438462cbbb0835c5"
 branches[parseError] = "14ea3581389e329e27c496367b2b85b15fc106f9"
 branches[saveProblem] = "4d16f3f4b1d7fb18bac5d8ed09b9a45dbe6711ff"
-last_check = 1505691225
+last_check = 1505818639
 
 [773680newApplication]
 name = "Portainer"
@@ -35,7 +35,6 @@ scale = 1
 icon = "muximux-database"
 color = "#bf9000"
 enabled = "true"
-dd = "true"
 
 [Plex]
 name = "Plex"
@@ -44,7 +43,6 @@ scale = 1
 icon = "muximux-plex"
 color = "#f9be03"
 enabled = "true"
-dd = "true"
 default = "true"
 
 [PlexPy]
@@ -54,7 +52,6 @@ scale = 1
 icon = "muximux-plexivity"
 color = "#cc7b19"
 enabled = "true"
-dd = "true"
 
 [Ombi]
 name = "Ombi"
@@ -63,7 +60,6 @@ scale = 1
 icon = "muximux-plex"
 color = "#df691a"
 enabled = "true"
-dd = "true"
 
 [Couchpotato]
 name = "CouchPotato"
@@ -72,7 +68,6 @@ scale = 1
 icon = "muximux-couchpotato"
 color = "#f85c22"
 enabled = "true"
-dd = "true"
 
 [Sonarr]
 name = "Sonarr"
@@ -81,7 +76,6 @@ scale = 1
 icon = "muximux-sonarr"
 color = "#35c5f4"
 enabled = "true"
-dd = "true"
 
 [870113newApplication]
 name = "Radarr"
@@ -90,7 +84,6 @@ scale = 1
 icon = "muximux-movie_filter"
 color = "#cc0000"
 enabled = "true"
-dd = "true"
 
 [625037newApplication]
 name = "Sickrage"
@@ -99,7 +92,6 @@ scale = 1
 icon = "muximux-play"
 color = "#0c343d"
 enabled = "true"
-dd = "true"
 
 [deluge]
 name = "Deluge VPN"
@@ -110,15 +102,6 @@ color = "#9900ff"
 enabled = "true"
 dd = "true"
 
-[705606newApplication]
-name = "UniFi"
-url = "http://locip:8443"
-scale = 1
-icon = "muximux-connection"
-color = "#6fa8dc"
-enabled = "true"
-dd = "true"
-
 [812377newApplication]
 name = "Home Assistant"
 url = "http://locip:8123/"
@@ -126,7 +109,6 @@ scale = 1
 icon = "muximux-home2"
 color = "#674ea7"
 enabled = "true"
-dd = "true"
 
 [678211newApplication]
 name = "HTPC Manager"
@@ -135,7 +117,6 @@ scale = 1
 icon = "muximux-home"
 color = "#e69138"
 enabled = "true"
-dd = "true"
 
 [793005newApplication]
 name = "Ubooquity - Admin"
@@ -144,7 +125,6 @@ scale = 1
 icon = "muximux-book"
 color = "#b6d7a8"
 enabled = "true"
-dd = "true"
 
 [666910newApplication]
 name = "Ubooquity - Library"
@@ -153,7 +133,14 @@ scale = 1
 icon = "muximux-books"
 color = "#ead1dc"
 enabled = "true"
-dd = "true"
+
+[705606newApplication]
+name = "UniFi"
+url = "http://locip:8443"
+scale = 1
+icon = "muximux-connection"
+color = "#6fa8dc"
+enabled = "true"
 
 [124879newApplication]
 name = "Minio"
@@ -162,13 +149,11 @@ scale = 1
 icon = "muximux-storage"
 color = "#00ff00"
 enabled = "true"
-dd = "true"
 
 [449278newApplication]
 name = "Setup Instructions"
-url = "http://locip:8585"
+url = "http://locip:8585/"
 scale = 1
 icon = "muximux-settings"
 color = ""
 enabled = "true"
-dd = "true"
