@@ -120,7 +120,7 @@ enabled = "true"
 
 [793005newApplication]
 name = "Ubooquity - Admin"
-url = "http://locip:2203/ubooquity/admin/"
+url = "http://locip:2203/ubooquity/admin"
 scale = 1
 icon = "muximux-book"
 color = "#b6d7a8"
