@@ -35,7 +35,7 @@ For simplicity's sake (eg. automatic dependency management), the method used to 
 
 For Muximux, install the plugin "[Ignore X-Frame headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)" which disables the blocking of non-secure content. This extension allows containers like HTPC Manager to load correctly in the frame.
 
-For DelugeVPN, the PIA Netherlands default openvpn profile, and certs from PIA install automatically before first launch. If choosing a different endpoint, extract ONE profile from the openvpn.zip profiles included in the ~/Mediabox directory. You can download the newest profiles from PIA "[Here](https://www.privateinternetaccess.com/pages/openvpn-ios)" 
+For DelugeVPN, the PIA Netherlands default openvpn profile, and certs from PIA install automatically before first launch. If choosing a different endpoint, extract ONE profile from the openvpn.zip profiles included in the ~/Mediabox directory. You can download the newest profiles from PIA "[here](https://www.privateinternetaccess.com/pages/openvpn-ios)".
 
 ### Installation:
 
@@ -60,7 +60,7 @@ Reboot your machine manually, or using the command line:
 If using Lubuntu 16.04 LTS, you can map network NFS shares to a NAS by doing the following on the Host:
 
 `$ sudo apt-get install nfs-kernel-server` 
--- Enables ability to share NFS directories on host.
+-- Enables ability to share NFS directories on host
 
 `$ sudo apt-get install nfs-common` 
 -- Provides NFS client functionality
@@ -70,7 +70,8 @@ Add the following line to your /etc/fstab
 `"My NAS IP":/"path to movies" /home/plex/mediabox/content/movies/ nfs rsize=8192,wsize=8192,timeo=14,intr` 
 
 
-`$ sudo mount -a` -- Mounts the share from fstab. If not securing with password, be sure your shared NFS folder has the correct permissions for guests.
+`$ sudo mount -a` 
+-- Mounts the share from fstab. If not securing with password, be sure your shared NFS folder has the correct permissions for guests
 
 ---
 
