@@ -76,6 +76,8 @@ Add the following line to your /etc/fstab
 `$ sudo mount -a` 
 -- Mounts the share from fstab. If not securing with password, be sure your shared NFS folder has the correct permissions for guests
 
+**WARNING: If you mount your network drives as writeable to the /content folder, and decide to remove the ~/mediabox folder at a later point, be sure to unmount your network drives first. Otherwise, you risk deleting your media with a sudo rm -r ~/mediabox command.**
+
 ---
 
 # Using mediabox
