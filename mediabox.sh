@@ -149,6 +149,7 @@ echo "Configuring Deluge daemon access - UHTTPD index file - Muximux Defaults - 
 `rm muximux/config/www/muximux/settings.ini.php > /dev/null 2>&1`
 `mv settings.ini.php muximux/config/www/muximux/settings.ini.php`
 `sed -i "s/locip/$locip/g"  muximux/config/www/muximux/settings.ini.php`
+`chmod 0664 muximux/config/www/muximux/settings.ini.php`
 `cp .env muximux/config/www/muximux/env.txt`
 `docker start muximux > /dev/null 2>&1`
 
