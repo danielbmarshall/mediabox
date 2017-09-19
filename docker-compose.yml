@@ -115,12 +115,13 @@ services:
     environment:
     - PGID=${PGID}
     - PUID=${PUID}
-    image: rogueosb/ombi
+    image: linuxserver/ombi
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:3579:3579"
     restart: always
     volumes:
+    - /etc/localtime:/etc/localtime:ro
     - ./ombi:/config
   plex:
     container_name: plex
