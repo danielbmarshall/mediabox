@@ -20,7 +20,7 @@ Components include:
   * [HTPC Manager](http://htpc.io/)
   * [cAdvisor](https://github.com/google/cadvisor)
   
-  ![Desktop screenshot](https://imgur.com/a/Igoov)
+  ![Desktop screenshot](https://i.imgur.com/0uYWQ49.png)
   
 # Prerequisites
 
