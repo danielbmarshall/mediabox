@@ -35,7 +35,7 @@ For simplicity's sake (eg. automatic dependency management), the method used to 
 
 For Muximux, install the plugin "[Ignore X-Frame headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)" which disables the blocking of non-secure content. This extension allows containers like HTPC Manager to load correctly in the frame.
 
-For DelugeVPN, you will need to load one openvpn profile and certs from PIA after first launch or Deluge will not start! (https://www.privateinternetaccess.com/pages/openvpn-ios)
+For DelugeVPN, the PIA Netherlands default openvpn profile, and certs from PIA install automatically before first launch. If choosing a different endpoint, extract ONE profile from the openvpn.zip profiles included in the ~/Mediabox directory. You can download the newest profiles from PIA "[Here](https://www.privateinternetaccess.com/pages/openvpn-ios)" 
 
 ### Installation:
 
