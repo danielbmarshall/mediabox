@@ -1,5 +1,6 @@
 # mediabox
-Mediabox is meant to be an all Docker Container based media aggregator stack. See original GIT at https://github.com/tom472/mediabox .
+Mediabox is meant to be an all Docker Container based media aggregator stack. See original GIT [here](https://github.com/tom472/mediabox).
+
 THIS IS ONLY A TEST FORK - I am not a developer, just customizing the really great work from tom472 to my own needs.
 
 Components include:
