@@ -58,14 +58,19 @@ Reboot your machine manually, or using the command line:
 `$ sudo reboot`
 
 If using Lubuntu 16.04 LTS, you can map network NFS shares to a NAS by doing the following on the Host:
-`$ sudo apt-get install nfs-kernel-server` -- Enables ability to share NFS directories on host.
-`$ sudo apt-get install nfs-common` -- Provides NFS client functionality
+
+`$ sudo apt-get install nfs-kernel-server` 
+-- Enables ability to share NFS directories on host.
+
+`$ sudo apt-get install nfs-common` 
+-- Provides NFS client functionality
 
 Add the following line to your /etc/fstab
 
-"My NAS IP":/"path to movies" /home/plex/mediabox/content/movies/ nfs rsize=8192,wsize=8192,timeo=14,intr
+`"My NAS IP":/"path to movies" /home/plex/mediabox/content/movies/ nfs rsize=8192,wsize=8192,timeo=14,intr` 
 
-`$ sudo mount -a` -- Mounts the share from fstab. Be sure your shared NFS folder has the correct permissions for guests, if not securing with password.
+
+`$ sudo mount -a` -- Mounts the share from fstab. If not securing with password, be sure your shared NFS folder has the correct permissions for guests.
 
 ---
 
