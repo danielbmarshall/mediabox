@@ -39,6 +39,7 @@ services:
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:8282:8080"
+    restart: always
     volumes:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
@@ -62,6 +63,7 @@ services:
     - /etc/localtime:/etc/localtime:ro
   home-assistant:
     image: homeassistant/home-assistant:latest
+    restart: always
     container_name: home-assistant
     network_mode: bridge
     ports:
@@ -75,6 +77,7 @@ services:
     - PUID=${PUID}
     - TZ=America/Chicago
     image: linuxserver/htpcmanager:latest
+    restart: always
     container_name: htpcmanager
     network_mode: bridge
     ports:
@@ -210,6 +213,7 @@ services:
     - PGID=${PGID}
     - PUID=${PUID}
     image: linuxserver/sonarr:latest
+    restart: always
     container_name: sonarr
     network_mode: bridge
     ports:
