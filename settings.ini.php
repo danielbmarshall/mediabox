@@ -26,7 +26,7 @@ branches[experimental] = "262b1a4c4ca6fa0386e46400211604d66c0bd22d"
 branches[master] = "66b11488206b44364b6ed8bb438462cbbb0835c5"
 branches[parseError] = "14ea3581389e329e27c496367b2b85b15fc106f9"
 branches[saveProblem] = "4d16f3f4b1d7fb18bac5d8ed09b9a45dbe6711ff"
-last_check = 1505818639
+last_check = 1505843718
 
 [773680newApplication]
 name = "Portainer"
@@ -136,7 +136,7 @@ enabled = "true"
 
 [705606newApplication]
 name = "UniFi"
-url = "http://locip:8443"
+url = "https://locip:8443"
 scale = 1
 icon = "muximux-connection"
 color = "#6fa8dc"
@@ -155,5 +155,13 @@ name = "Setup Instructions"
 url = "http://locip:8585/"
 scale = 1
 icon = "muximux-settings"
+color = ""
+enabled = "true"
+
+[4010newApplication]
+name = "cAdvisor"
+url = "http://locip:8282"
+scale = 1
+icon = "muximux-line-chart"
 color = ""
 enabled = "true"
