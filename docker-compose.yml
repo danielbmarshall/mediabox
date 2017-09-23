@@ -61,6 +61,23 @@ services:
     - ./content/downloads:/downloads
     - ./content/movies:/movies
     - /etc/localtime:/etc/localtime:ro
+  lazylibrarian:
+    container_name: lazylibrarian-calibre
+    environment:
+    - PGID=${PGID}
+    - PUID=${PUID}
+    image: thraxis/lazylibrarian-calibre
+    network_mode: bridge
+    ports:
+    - "${IP_ADDRESS}:5299:5299"
+    restart: always
+    volumes:
+    - ./lazylibrarian:/config
+    - ./content/downloads:/downloads
+    - ./content/books:/books
+    - ./content/audiobooks:/audiobooks
+    - ./content/comics:/magazines
+    - /etc/localtime:/etc/localtime:ro
   home-assistant:
     image: homeassistant/home-assistant:latest
     restart: always
@@ -115,7 +132,7 @@ services:
     environment:
     - PGID=${PGID}
     - PUID=${PUID}
-    image: linuxserver/ombi
+    image: linuxserver/ombi:latest
     network_mode: bridge
     ports:
     - "${IP_ADDRESS}:3579:3579"
