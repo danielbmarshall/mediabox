@@ -46,7 +46,20 @@ services:
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
     - /dev/disk/:/dev/disk:ro
-  couchpotato:
+  Glances:
+    container_name: Glances
+    image: docker.io/nicolargo/glances:latest
+    pid: host
+    restart: always
+    network_mode: host
+    environment:
+    - GLANCES_OPT="-w" 
+    ports:
+    - "${IP_ADDRESS}:61208-61209:61208-61209"
+    volumes:
+    - ./glances.conf:/glances/conf/glances.conf 
+    - /var/run/docker.sock:/var/run/docker.sock:ro 
+   couchpotato:
     container_name: couchpotato
     environment:
     - PGID=${PGID}
