@@ -48,7 +48,7 @@ services:
     - /dev/disk/:/dev/disk:ro
   Glances:
     container_name: Glances
-    image: docker.io/nicolargo/glances:latest
+    image: nicolargo/glances:latest
     pid: host
     restart: always
     network_mode: host
@@ -57,7 +57,7 @@ services:
     ports:
     - "${IP_ADDRESS}:61208-61209:61208-61209"
     volumes:
-    - ./glances.conf:/glances/conf/glances.conf 
+    - ./mediabox/glances.conf:/glances/conf/glances.conf 
     - /var/run/docker.sock:/var/run/docker.sock:ro 
    couchpotato:
     container_name: couchpotato
