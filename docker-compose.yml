@@ -57,7 +57,7 @@ services:
     ports:
     - "${IP_ADDRESS}:61208-61209:61208-61209"
     volumes:
-    - ./mediabox/glances.conf:/glances/conf/glances.conf 
+    - ./glances.conf:/glances/conf/glances.conf 
     - /var/run/docker.sock:/var/run/docker.sock:ro 
   couchpotato:
     container_name: couchpotato
