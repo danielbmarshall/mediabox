@@ -59,7 +59,7 @@ services:
     volumes:
     - ./mediabox/glances.conf:/glances/conf/glances.conf 
     - /var/run/docker.sock:/var/run/docker.sock:ro 
-   couchpotato:
+  couchpotato:
     container_name: couchpotato
     environment:
     - PGID=${PGID}
